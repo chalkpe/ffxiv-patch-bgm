@@ -12,12 +12,14 @@ export default class ExpansionPicker extends HTMLElement {
     for (const e of ffxiv.expansions) {
       const img = this.shadowRoot.appendChild(document.createElement('img'))
       img.setAttribute('src', e.logo)
-      img.setAttribute('alt', e.displayName)
+      img.setAttribute('title', `${e.version} - ${e.displayName}`)
       img.addEventListener('click', () => {
         ExpansionPicker.change(e)
         PatchPicker.change(e.version === e.patches[0].version && e.patches[0])
       })
     }
+
+    console.log(ffxiv)
   }
 
   static change (expansion) {
