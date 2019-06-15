@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FFXIV Patch Notes BGM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <script type="module" src="main.js"></script>
+  <header></header>
+
+  <main>
+    <patch-list></patch-list>
+  </main>
+
+  <footer>
+    <music-player></music-player>
+    <div class="copyright">
+      This site is not affiliated with Square Enix &middot;
+      <a href="https://github.com/ChalkPE/ffxiv-patch-bgm">View on GitHub</a><br>
+      FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.<br>
+      &copy; 2010 - 2019 SQUARE ENIX CO., LTD. All Rights Reserved. Published in Korea by Actoz Soft CO., LTD.
+    </div>
+  </footer>
+
+  <template id="expansion-button">
+    <img class="logo" alt="확장팩">
+
+    <style>
+      .logo {
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0px 1px 0px 0px #ffffff40 inset, 0px 1px 2px 0px #00000080;
+      }
+    </style>
+  </template>
+
+  <template id="patch-list">
+    <ul class="patches"></ul>
+
+    <style>
+      .patches {
+        padding: 0;
+        margin: 0.5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+
+      patch-view {
+        margin: 0.5rem;
+        width: calc(100% / 4 - 1rem);
+      }
+
+      @media screen and (max-width: 700px) {
+        patch-view {
+          margin: 0;
+          width: calc(100% / 2 - 1rem);
+        }
+
+        .patches {
+          justify-content: space-around;
+        }
+      }
+    </style>
+  </template>
+
+  <template id="patch-view">
+    <img class="logo" alt="패치">
+
+    <style>
+      .logo {
+        width: 100%;
+      }
+    </style>
+  </template>
+
+  <template id="music-player">
+    <span class="status"></span>
+    <audio id="bgm" loop autoplay></audio>
+
+    <style>
+      .status {
+        display: block;
+        text-align: center;
+        font-style: italic;
+      }
+    </style>
+  </template>
+</html>
