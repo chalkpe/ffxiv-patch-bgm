@@ -8,30 +8,26 @@ export default class MusicPlayer extends HTMLElement {
   connectedCallback () {
     this.audio = this.shadowRoot.querySelector('audio')
     this.status = this.shadowRoot.querySelector('.status')
+    document.addEventListener('PatchChanged', e => this.onPatchChange(e.detail))
+
     this.pause()
-    
-    document.addEventListener('BGMChange', ({ detail }) => this.play(detail))
   }
 
-  pause () {
+  pause (text = '재생 중인 음악 없음') {
     this.audio.pause()
-    this.status.textContent = '재생 중인 음악 없음'
+    this.status.textContent = text
   }
 
-  play (patch) {
-    this.pause()
-    this.status.textContent = '음악 바꾸는 중...'
+  onPatchChange (p) {
+    if (p.bgm === this.audio.src) return
+    this.pause('음악 바꾸는 중...')
 
-    this.audio.src = patch.bgm
+    this.audio.src = p.bgm
     this.audio.load()
-
     this.audio.oncanplaythrough = () => {
       this.audio.play()
-      this.status.textContent = `재생 중 — Patch ${patch.version} ${patch.displayName}`
-      this.status.onclick = () => {
-        this.pause()
-        window.open(patch.notes, '_blank').focus()
-      }
+      this.status.textContent = `재생 중 — Patch ${p.version} ${p.displayName}`
+      this.status.onclick = () => this.pause() || window.open(p.notes, '_blank').focus()
     }
   }
 }

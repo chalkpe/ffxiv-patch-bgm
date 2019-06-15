@@ -7,86 +7,115 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
   <script type="module" src="main.js"></script>
-  <header></header>
+
+  <header>
+    <expansion-picker></expansion-picker>
+  </header>
 
   <main>
-    <patch-list></patch-list>
+    <patch-picker></patch-picker>
+    <music-player></music-player>
   </main>
 
   <footer>
-    <music-player></music-player>
-    <div class="copyright">
-      This site is not affiliated with Square Enix &middot;
-      <a href="https://github.com/ChalkPE/ffxiv-patch-bgm">View on GitHub</a><br>
-      FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.<br>
-      &copy; 2010 - 2019 SQUARE ENIX CO., LTD. All Rights Reserved. Published in Korea by Actoz Soft CO., LTD.
-    </div>
+    This site is not affiliated with Square Enix &middot;
+    <a href="https://github.com/ChalkPE/ffxiv-patch-bgm">View on GitHub</a><br>
+    FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.<br>
+    &copy; 2010 - 2019 SQUARE ENIX CO., LTD. All Rights Reserved. Published in Korea by Actoz Soft CO., LTD.
   </footer>
 
-  <template id="expansion-button">
-    <img class="logo" alt="확장팩">
-
+  <template id="expansion-picker">
     <style>
-      .logo {
+      :host {
+        display: grid;
+        grid-gap: var(--gap);
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @media screen and (max-width: 800px) and (min-width: 501px) {
+        :host {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        :host {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      img {
         width: 100%;
         border-radius: 0.5rem;
-        box-shadow: 0px 1px 0px 0px #ffffff40 inset, 0px 1px 2px 0px #00000080;
+        box-shadow: 0px 1px 0px 0px #fff4 inset, 0px 1px 2px 0px #0008;
       }
     </style>
   </template>
 
-  <template id="patch-list">
-    <ul class="patches"></ul>
+  <template id="patch-picker">
+    <div class="patches"></div>
 
     <style>
+      :host {
+        flex-grow: 1;
+        align-self: stretch;
+      }
+
       .patches {
-        padding: 0;
-        margin: 0.5rem;
+        --patch-count: 3;
 
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         align-items: center;
-        align-content: center;
+        align-content: space-around;
         justify-content: center;
+        padding: calc(var(--gap) / 2);
+        border-radius: var(--gap);
+        border: 2px dotted #888;
       }
 
-      patch-view {
-        margin: 0.5rem;
-        width: calc(100% / 4 - 1rem);
-      }
-
-      @media screen and (max-width: 700px) {
-        patch-view {
-          margin: 0;
-          width: calc(100% / 2 - 1rem);
-        }
-
+      @media screen and (min-width: 1501px) {
         .patches {
-          justify-content: space-around;
+          padding-top: calc(8 * var(--gap));
+          padding-bottom: calc(8 * var(--gap));
         }
       }
-    </style>
-  </template>
 
-  <template id="patch-view">
-    <img class="logo" alt="패치">
+      @media screen and (max-width: 1500px) and (min-width: 501px) {
+        .patches {
+          padding-top: calc(2 * var(--gap));
+          padding-bottom: calc(2 * var(--gap));
+        }
+      }
 
-    <style>
-      .logo {
-        width: 100%;
+      @media screen and (max-width: 1100px) and (min-width: 651px) {
+        .patches { --patch-count: 2; }
+      }
+
+      @media screen and (max-width: 650px) and (min-width: 501px) {
+        .patches { --patch-count: 1.4; }
+      }
+
+      @media screen and (max-width: 500px) {
+        .patches { --patch-count: 1; }
+      }
+
+      .patches img {
+        margin: calc(var(--gap) / 2);
+        width: calc(100% / var(--patch-count) - var(--gap));
+        height: max-content;
       }
     </style>
   </template>
 
   <template id="music-player">
-    <span class="status"></span>
     <audio id="bgm" loop autoplay></audio>
+    <span class="status" style="font-style: italic"></span>
 
     <style>
-      .status {
-        display: block;
-        text-align: center;
-        font-style: italic;
+      .status { font-size: 1.35rem; }
+      @media screen and (max-width: 600px) {
+        .status { font-size: 1.1rem; }
       }
     </style>
   </template>
