@@ -1,7 +1,7 @@
 export default {
-  name: 'Final Fantasy XIV',
+  name: 'FINAL FANTASY XIV',
   displayName: '파이널판타지14',
-  currentVersion: '4.5',
+  currentVersion: '5.4',
 
   expansions: [
     {
@@ -62,34 +62,34 @@ export default {
           displayName: '창천의 이슈가르드',
           notes: 'https://www.ff14.co.kr/patch/v3.0/index.asp',
           bgm: 'https://image.ff14.co.kr/patch/v3.0p/snowind.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v3.0p/img/title.png',
+          logo: 'https://image.ff14.co.kr/patch/v3.0p/img/title.png'
         },
-        
+
         {
           version: '3.1',
           name: 'As Goes Light, So Goes Darkness',
           displayName: '빛과 어둠의 경계',
           notes: 'https://www.ff14.co.kr/patch/v3.1/index.asp',
           bgm: 'https://image.ff14.co.kr/patch/v3.1p/bg_sound.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v3.1p/img/title.png',
+          logo: 'https://image.ff14.co.kr/patch/v3.1p/img/title.png'
         },
-        
+
         {
           version: '3.2',
           name: 'The Gears of Change',
           displayName: '운명의 톱니바퀴',
           notes: 'https://www.ff14.co.kr/patch/v3.2/index.asp',
           bgm: 'https://image.ff14.co.kr/patch/v3.2p/bg_sound.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v3.2p/img/title.png',
+          logo: 'https://image.ff14.co.kr/patch/v3.2p/img/title.png'
         },
-        
+
         {
           version: '3.3',
-          name: 'Soul Surrender',
-          displayName: '혼을 계승하는 자',
+          name: 'Revenge of the Horde',
+          displayName: '최후의 포효',
           notes: 'https://www.ff14.co.kr/patch/v3.3/index.asp',
           bgm: 'https://image.ff14.co.kr/patch/v3.3p/bg_sound.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v3.3p/img/title.png',
+          logo: 'https://image.ff14.co.kr/patch/v3.3p/img/title.png'
         },
 
         {
@@ -98,7 +98,7 @@ export default {
           displayName: '혼을 계승하는 자',
           notes: 'https://www.ff14.co.kr/patch/v3.4/index.asp',
           bgm: 'https://image.ff14.co.kr/patch/v3.4p/bg_sound.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v3.4p/img/title.png',
+          logo: 'https://image.ff14.co.kr/patch/v3.4p/img/title.png'
         },
 
         {
@@ -134,16 +134,16 @@ export default {
           displayName: '영웅의 귀환',
           notes: 'https://www.ff14.co.kr/patch/v4.1/index',
           bgm: 'https://image.ff14.co.kr/patch/v4.1/bgm.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v4.1/img/intro_logo.png',
+          logo: 'https://image.ff14.co.kr/patch/v4.1/img/intro_logo.png'
         },
-        
+
         {
           version: '4.2',
           name: 'Rise of a New Sun',
           displayName: '새벽의 빛',
           notes: 'https://www.ff14.co.kr/patch/v4.2/index',
           bgm: 'https://image.ff14.co.kr/patch/v4.2/bgm.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v4.2/img/intro_logo.png',
+          logo: 'https://image.ff14.co.kr/patch/v4.2/img/intro_logo.png'
         },
 
         {
@@ -152,7 +152,7 @@ export default {
           displayName: '월하의 꽃',
           notes: 'https://www.ff14.co.kr/patch/v4.3/index',
           bgm: 'https://image.ff14.co.kr/patch/v4.3/bgm.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v4.3/img/intro_logo.png',
+          logo: 'https://image.ff14.co.kr/patch/v4.3/img/intro_logo.png'
         },
 
         {
@@ -161,7 +161,7 @@ export default {
           displayName: '광란의 전주곡',
           notes: 'https://www.ff14.co.kr/patch/v4.4/index',
           bgm: 'https://image.ff14.co.kr/patch/v4.4/bgm.mp3',
-          logo: 'https://image.ff14.co.kr/patch/v4.4/img/intro_logo.png',
+          logo: 'https://image.ff14.co.kr/patch/v4.4/img/intro_logo.png'
         },
 
         {
@@ -171,6 +171,60 @@ export default {
           notes: 'https://www.ff14.co.kr/patch/v4.5/index',
           bgm: 'https://image.ff14.co.kr/patch/v4.5/bgm.mp3',
           logo: 'https://image.ff14.co.kr/patch/v4.5/img/intro_logo.png'
+        }
+      ]
+    },
+
+    {
+      version: '5.0',
+      name: 'Shadowbringers',
+      displayName: '칠흑의 반역자',
+      logo: 'https://img.finalfantasyxiv.com/lds/promo/h/C/pE5Lf_QsTngb9GbYe8kdXRQz3E.jpg',
+
+      patches: [
+        {
+          version: '5.0',
+          name: 'Shadowbringers',
+          displayName: '칠흑의 반역자',
+          notes: 'https://www.ff14.co.kr/patch/v5.0/index',
+          bgm: 'https://image.ff14.co.kr/patch/v5.0/BGM.mp3',
+          logo: 'https://image.ff14.co.kr/patch/v5.0/img/intro_logo.png'
+        },
+
+        {
+          version: '5.1',
+          name: 'Vows of Virtue, Deeds of Cruelty',
+          displayName: '하얀 서약, 검은 밀약',
+          notes: 'https://www.ff14.co.kr/patch/v5.1/index',
+          bgm: 'https://image.ff14.co.kr/patch/v5.1/bgm.mp3',
+          logo: 'https://image.ff14.co.kr/patch/v5.1/img/intro_logo.png'
+        },
+
+        {
+          version: '5.2',
+          name: 'Echoes of a Fallen Star',
+          displayName: '추억의 흉성',
+          notes: 'https://www.ff14.co.kr/patch/v5.2/index',
+          bgm: 'https://image.ff14.co.kr/patch/v5.2/bgm.mp3',
+          logo: 'https://image.ff14.co.kr/patch/v5.2/img/intro_logo.png'
+        },
+
+        {
+          version: '5.3',
+          name: 'Reflections in Crystal',
+          displayName: '크리스탈의 잔광',
+          notes: 'https://www.ff14.co.kr/patch/v5.3/index',
+          bgm: 'https://image.ff14.co.kr/patch/v5.3/bgm.mp3',
+          logo: 'https://image.ff14.co.kr/patch/v5.3/img/intro_logo.png'
+        },
+
+        {
+          version: '5.4',
+          name: 'Futures Rewritten',
+          displayName: '또 하나의 미래',
+          notes: 'https://www.ff14.co.kr/patch/v5.4/index',
+          bgm: 'https://image.ff14.co.kr/patch/v5.4/bgm.mp3',
+          logo: 'https://image.ff14.co.kr/patch/v5.4/img/intro_logo.png'
         }
       ]
     }
