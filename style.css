@@ -4,9 +4,10 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  word-break: keep-all;
   box-sizing: border-box;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -15,10 +16,12 @@ a {
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #f3f3f3;
-  font-family: 'Noto Sans KR', sans-serif;
+  color: #fffe;
+  background-color: #222;
 }
 
 body {
@@ -38,7 +41,7 @@ body {
 
 header, main, footer {
   max-width: var(--maximun);
-  margin-bottom: var(--gap);
+  margin-bottom: calc(2 * var(--gap));
 }
 
 main {

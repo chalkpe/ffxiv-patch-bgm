@@ -28,7 +28,7 @@ export default class MusicPlayer extends HTMLElement {
       this.audio.play()
 
       this.status.setAttribute('title', p.name)
-      this.status.textContent = `재생 중 — Patch ${p.version} ${p.displayName}`
+      this.status.textContent = `♪ 재생 중 — 패치 ${p.version} ${p.displayName} ♪`
       this.status.onclick = () => this.pause() || window.open(p.notes, '_blank').focus()
     }
   }

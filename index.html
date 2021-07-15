@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FFXIV Patch Notes BGM</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <script type="module" src="main.js"></script>
 
   <header>
@@ -68,38 +68,22 @@
       }
 
       .patches {
-        --patch-count: 3;
+        --patch-count: 4;
 
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         align-content: space-around;
         justify-content: center;
-        padding: calc(var(--gap) / 2);
         border-radius: var(--gap);
-        border: 2px dotted #888;
       }
 
-      @media screen and (min-width: 1501px) {
-        .patches {
-          padding-top: calc(8 * var(--gap));
-          padding-bottom: calc(8 * var(--gap));
-        }
+      @media screen and (max-width: 1100px) and (min-width: 801px) {
+        .patches { --patch-count: 3; }
       }
 
-      @media screen and (max-width: 1500px) and (min-width: 501px) {
-        .patches {
-          padding-top: calc(2 * var(--gap));
-          padding-bottom: calc(2 * var(--gap));
-        }
-      }
-
-      @media screen and (max-width: 1100px) and (min-width: 651px) {
+      @media screen and (max-width: 800px) and (min-width: 501px) {
         .patches { --patch-count: 2; }
-      }
-
-      @media screen and (max-width: 650px) and (min-width: 501px) {
-        .patches { --patch-count: 1.4; }
       }
 
       @media screen and (max-width: 500px) {
@@ -107,21 +91,24 @@
       }
 
       .patches img {
-        margin: calc(var(--gap) / 2);
-        width: calc(100% / var(--patch-count) - var(--gap));
+        margin: calc(var(--gap));
+        width: calc(100% / var(--patch-count) - var(--gap) * 2);
         height: auto;
       }
     </style>
   </template>
 
   <template id="music-player">
-    <audio id="bgm" loop autoplay></audio>
-    <span class="status" style="font-style: italic"></span>
+    <div class="status"></div>
+    <audio loop autoplay></audio>
 
     <style>
       .status {
         cursor: pointer;
         font-size: 1.35rem;
+        font-style: italic;
+        text-align: center;
+        margin-top: calc(2 * var(--gap));
       }
 
       @media screen and (max-width: 600px) {
